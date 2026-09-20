@@ -139,7 +139,7 @@ st.divider()
 
 with st.sidebar:
 
-    st.header("⚙️ Forecast Settings")
+    st.header("⚙️ :blue[Forecast Settings]")
 
     store_nbr = st.selectbox(
         "🏪 Select Store",
@@ -197,7 +197,7 @@ forecast_date = pd.Timestamp(forecast_date)
 # MAIN DASHBOARD
 # ============================================================
 
-st.subheader("📋 Forecast Information")
+st.subheader("📋 :green[Forecast Information]")
 
 info1, info2, info3, info4 = st.columns(4)
 
@@ -383,7 +383,8 @@ if predict_button:
 
 st.divider()
 
-st.subheader("📊 Model Performance")
+st.subheader("📊 :green[Model Performance]")
+
 
 xgb_rows = metrics[
     metrics["model"] == "XGBoost"
@@ -418,7 +419,7 @@ if not xgb_rows.empty:
 # MODEL COMPARISON
 # ============================================================
 
-st.subheader("⚖️ Baseline vs XGBoost")
+st.subheader("⚖️ :green[Baseline vs XGBoost]")
 
 comparison = metrics.set_index("model")
 
@@ -433,7 +434,8 @@ st.bar_chart(
 # FEATURE IMPORTANCE
 # ============================================================
 
-st.subheader("⭐ Feature Importance")
+st.subheader("⭐ :green[Feature Importance]")
+
 
 importance_df = pd.DataFrame(
     {
@@ -458,7 +460,8 @@ st.bar_chart(
 
 st.divider()
 
-st.subheader("ℹ️ About This System")
+st.subheader("ℹ️ :green[About This System]")
+
 
 st.markdown(
     """
