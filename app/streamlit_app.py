@@ -235,7 +235,7 @@ st.divider()
 predict_button = st.button(
     "🚀 Generate Demand Forecast",
     type="primary",
-    use_container_width=True,
+    width="stretch",
 )
 
 
@@ -346,11 +346,10 @@ if predict_button:
         ]
 
         st.dataframe(
-            display_forecast,
-            use_container_width=True,
-            hide_index=True,
-        )
-
+    display_forecast,
+    width="stretch",
+    hide_index=True,
+)
 
         # ====================================================
         # DOWNLOAD FORECAST
